@@ -1,0 +1,23 @@
+
+Player
+    id - random UUID
+    Name -
+    SelectedLogo - 
+
+Round
+   player1Id
+   player2Id
+
+   [
+    1 - player1Id
+    2 - player2Id
+    3 - none
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+   ]
+   
