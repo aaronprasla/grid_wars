@@ -148,8 +148,8 @@ class GameScreenState extends State<GameScreen> with SingleTickerProviderStateMi
         padding: const EdgeInsets.only(top: 35.0),
         child: Column(
           children: [
-            _buildTopRow(context),
-            PlayerInfoRow(),
+            buildTopRow(context),
+            const PlayerInfoRow(),
             _buildBoard(),
           ],
         ),
@@ -157,7 +157,7 @@ class GameScreenState extends State<GameScreen> with SingleTickerProviderStateMi
     );
   }
 
-  Widget _buildTopRow(BuildContext context) {
+  Widget buildTopRow(BuildContext context) {
     return Row(
       children: [
         IconButton(
@@ -170,7 +170,7 @@ class GameScreenState extends State<GameScreen> with SingleTickerProviderStateMi
           child: BlocBuilder<RoundBloc, RoundState>(
             builder: (context, state) {
               return Text(
-                'Round ${state is NumberOfRoundsState ? state.currentRound : '1'}/${state is NumberOfRoundsState ? state.maxRounds : '10'}',
+                'Round ${state is NumberOfRoundsState ? state.currentRound : '100'}/${state is NumberOfRoundsState ? state.maxRounds : '10'}',
               );
             },
           ),

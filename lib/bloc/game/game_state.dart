@@ -27,6 +27,7 @@ class SavedScoreState extends GameState {
   final int savedScore;
 
   const SavedScoreState({required this.savedScore});
+  @override
   List<Object?> get props => [savedScore];
 }
 
